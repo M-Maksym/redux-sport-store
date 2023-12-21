@@ -9,7 +9,7 @@ import {
 
 
 const ProductCard = ({id, name, text, img, price, colors}) =>{
-    return (<Card className="mt-6 w-96">
+    return (<Card className="mt-6 w-95">
     <CardHeader color="blue-gray" className="relative h-96">
       <img
         src={img}
