@@ -21,21 +21,30 @@ const Navbar = () =>{
 const handleOpenWish = () => {
     setOpenWish(true)
 }
+
     return (
     <>
-        <div className='bg-white w-full flex justify-around'>
-            <div className='text-black font-inter text-base font-medium tracking-normal leading-none text-center mr-40'>
+        <div className='bg-white w-full flex justify-around mt-3'>
+            <div className='text-black font-inter text-base font-medium tracking-normal leading-none text-center mr-40 cursor-pointer'
+            onClick={() => window.location.href = "/shipping-and-returns"}
+            >
                 Free shipping and returns
             </div>
             <div className='flex mx-4'>
-                <div className='text-black font-inter text-base font-medium tracking-normal leading-none text-center mr-4'>
+                <div className='text-black font-inter text-base font-medium tracking-normal leading-none text-center mr-4 cursor-pointer'
+                onClick={() => window.location.href = "/discount"}
+                >
                     50% Off
                 </div>
-                <div className='text-black font-inter text-base font-medium tracking-normal leading-none text-center ml-4'>
+                <div className='text-black font-inter text-base font-medium tracking-normal leading-none text-center ml-4 cursor-pointer'
+                onClick={() => window.location.href = "/about-store"}
+                >
                     About store
                 </div>
             </div>
-            <div className='text-black font-inter text-base font-medium tracking-normal leading-none text-center ml-40'>
+            <div className='text-black font-inter text-base font-medium tracking-normal leading-none text-center ml-40 cursor-pointer'
+            onClick={() => window.location.href = "/different-payment-methods"}
+            >
                 Different payment methods
             </div>
         </div>
