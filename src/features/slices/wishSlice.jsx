@@ -1,18 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const cartSlice = createSlice({
-    name: 'cart',
+export const wishSlice = createSlice({
+    name: 'wish',
     initialState: {
-        cart: [],
+        wish: [],
         amount: 0,
-        totalAmount: 0,
+        totalWishAmount: 0,
         totalPrice: 0,
     },
     reducers:{
-        addToCard(state, action){
+        addToWish(state, action){
             const productId = action.payload;
             try{
-                const exist = state.cart.find(
+                const exist = state.wish.find(
                     (product) => 
                     product.id === productId.id && 
                     product.size === productId.size && 
@@ -21,10 +21,10 @@ export const cartSlice = createSlice({
                 if(exist){
                     exist.amount++;
                     exist.totalPrice += productId.price;
-                    state.totalAmount++;
+                    state.totalWishAmount++;
                     state.totalPrice += productId.price;
                 }else{
-                    state.cart.push({
+                    state.wish.push({
                         id: productId.id,
                         price: productId.price,
                         size: productId.size,
@@ -35,25 +35,25 @@ export const cartSlice = createSlice({
                         text: productId.text,
                         color: productId.color,
                     })
-                    state.totalAmount++;
+                    state.totalWishAmount++;
                     state.totalPrice += productId.price;
                 }
             }catch(err){
                 return err;
             }
         },
-        removeFromCart(state, action){
+        removeFromWish(state, action){
             const productId = action.payload;
             try{
-                const exist = state.cart.find(
+                const exist = state.wish.find(
                     (product) => 
                     product.id === productId.id && 
                     product.size === productId.size && 
                     product.color === productId.color
                 );
                 if(exist.amount === 1){
-                    state.cart = state.cart.filter((product) => product.id !== productId.id ||  product.size !== productId.size || product.color !== productId.color);
-                    state.totalAmount--;
+                    state.wish = state.wish.filter((product) => product.id !== productId.id ||  product.size !== productId.size || product.color !== productId.color);
+                    state.totalWishAmount--;
                     state.totalPrice -= productId.price;
                 }else{
                     exist.amount--;
@@ -68,5 +68,5 @@ export const cartSlice = createSlice({
     }
 })
 
-export const {addToCard, removeFromCart} = cartSlice.actions;
-export default cartSlice.reducer;
+export const {addToWish, removeFromWish} = wishSlice.actions;
+export default wishSlice.reducer;

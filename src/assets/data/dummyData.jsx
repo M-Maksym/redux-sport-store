@@ -1,7 +1,7 @@
-import shoe1 from "../images/shoe1.jpg";
-import shoe2 from "../images/shoe2.jpg";
-import shoe3 from "../images/shoe3.jpg";
-import shoe4 from "../images/shoe4.jpg";
+import slide1 from "../images/slide1.jpg";
+import slide2 from "../images/slide2.jpg";
+import slide3 from "../images/slide3.jpg";
+import slide4 from "../images/slide4.jpg";
 import shoe5 from "../images/shoe5.jpg";
 import shoe6 from "../images/shoe6.jpg";
 import shoe7 from "../images/shoe7.jpg";
@@ -70,23 +70,23 @@ import suit8 from "../images/suit8.jpg";
 export const sliderData = [
   {
     id: "0",
-    img: shoe1,
+    img: slide1,
     text: "Summers SALE up to 50% OFF what are you wating for",
   },
   {
     id: "1",
-    img: shoe2,
-    text: "AUTUMN is coming, choose what suits you THE BEST",
+    img: slide2,
+    text: "Elevate your game with our cutting-edge sportswear collection",
   },
   {
     id: "2",
-    img: shoe3,
-    text: "Make your feet as comfortable as walking on the beach",
+    img: slide3,
+    text: "Step into style and performance with our latest sportswear arrivals",
   },
   {
     id: "3",
-    img: shoe4,
-    text: "Choose between basketball and fashion or choose both",
+    img: slide4,
+    text: "Embrace the season with sportswear that seamlessly blends fashion and function",
   },
 ];
 

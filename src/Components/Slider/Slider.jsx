@@ -16,7 +16,7 @@ const Slider = () =>{
             }>
                     <div>
                         {parseInt(item.id) === slideIndex && (
-                        <img className='h-[550px] w-full' src={item.img} alt="shoes"></img>)}
+                        <img className='h-[770px] w-full' src={item.img} alt="shoes"></img>)}
                     </div>
                     <div className='absolute top-[40px] mx-auto inset-x-1/4'>
                         <p className='text-white text-4xl font-inter font-bold tracking-normal leading-none'>
