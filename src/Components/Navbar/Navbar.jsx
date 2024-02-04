@@ -53,10 +53,7 @@ const handleOpenWish = () => {
                 <img className='h-20 w-auto' src={logo} alt='store'></img>
             </div>
             <div className='flex flex-row items-center'>
-                {/* ( <button className='font-inter text-base font-medium tracking-normal leading-none text-center mr-4' onClick={() => dispatch(logout())}>
-                    Logout
-                </button>) */}
-               
+              
                 <div className='flex flex-row items-center cursor-pointer mx-5' onClick={handleOpenWish}>
                     <svg xmlns="http://www.w3.org/2000/svg" 
                         fill="none" 
